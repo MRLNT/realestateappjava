@@ -1,5 +1,6 @@
 package com.example.realestateapp.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +14,7 @@ import com.example.realestateapp.Adapter.ListItemAdapter;
 import com.example.realestateapp.Domain.PropertyDomain;
 import com.example.realestateapp.R;
 import com.example.realestateapp.databinding.ActivityMainBinding;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initList();
+        initBottomMenu();
+    }
+
+    private void initBottomMenu() {
+        binding.bottomMenu.setOnItemSelectedListener(i -> {
+            if (i == R.id.profile){
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            }
+        });
     }
 
     private void initList() {

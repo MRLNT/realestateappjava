@@ -253,16 +253,17 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomMenu"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_margin="16dp"
         android:background="@drawable/black_bg"
         android:elevation="3dp"
         android:padding="4dp"
-        android:layout_margin="16dp"
         app:cnb_iconSize="20sp"
         app:cnb_menuResource="@menu/bottom_menu"
-        app:cnb_unselectedColor="@color/white"
         app:cnb_radius="50dp"
+        app:cnb_unselectedColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
